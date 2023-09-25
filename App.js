@@ -5,6 +5,7 @@ import Modal from 'react-native-modal';
 import { useState } from 'react';
 import Login from "./Login";
 import SMSComponent from './Sms';
+import PushNotification from './PushNotification';
 export default function App() {
   const [visible, setVisible] = useState(false);
   function handlePress() {
@@ -22,7 +23,7 @@ export default function App() {
       <Button title='Login' onPress={handlePress} />
       <Modal isVisible={visible} >
         <View>
-          <SMSComponent />
+          <PushNotification />
 
           <View>
             <Button title='Hide modal' onPress={handlePress}></Button>
