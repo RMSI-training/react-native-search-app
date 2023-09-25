@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-nat
 import Modal from 'react-native-modal';
 import { useState } from 'react';
 import Login from "./Login";
+import SMSComponent from './Sms';
 export default function App() {
   const [visible, setVisible] = useState(false);
   function handlePress() {
@@ -13,7 +14,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
-      <ScrollView onPress={value=> alert(value)}>
+      <ScrollView onPress={value => alert(value)}>
         <Text > Item 1</Text>
         <Text> Item 1</Text>
         <Text> Item 1</Text>
@@ -21,7 +22,7 @@ export default function App() {
       <Button title='Login' onPress={handlePress} />
       <Modal isVisible={visible} >
         <View>
-          <Login />
+          <SMSComponent />
 
           <View>
             <Button title='Hide modal' onPress={handlePress}></Button>
