@@ -16,7 +16,9 @@ function PushNotification() {
         let finalStatus = existingStatus;
         if (existingStatus !== 'granted') {
             alert("failed");
+            return;
         }
+        
     }
     function sendPushNotification() {
         registerForPushNotificationsAsync().then(token => console.log(token));
