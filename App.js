@@ -3,12 +3,10 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-native';
 import Modal from 'react-native-modal';
 import { useState } from 'react';
-import Login from "./Login";
-import SMSComponent from './Sms';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import { NativeScreenNavigationContainer } from 'react-native-screens';
-const Stack = createNativeStackNavigator();
+import AboutScreen from './About';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
 export default function App() {
   const [visible, setVisible] = useState(false);
   function handlePress() {
@@ -16,12 +14,10 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='home' component={HomeScreen} options={{ title: 'Home' }}>
-        </Stack.Screen>
-        <Stack.Screen name='profile' component={ProfileScreen}>
-        </Stack.Screen>
-      </Stack.Navigator>
+        <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="About" component={AboutScreen} />
+    </Drawer.Navigator>
     </NavigationContainer>
   );
 }

@@ -7,3 +7,11 @@ npm i @react-native-picker/picker
 ---------
 
 npm i @react-native-community/slider
+npm i @react-navigation/native @react-navigation/native-stack
+
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+Add in babel file
+plugins: ["react-native-reanimated/plugin"]
+
+expo r -c
