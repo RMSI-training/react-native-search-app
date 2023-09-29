@@ -7,3 +7,11 @@ npm i @react-native-picker/picker
 ---------
 
 npm i @react-native-community/slider
+====================  React navigation lab ==========
+if expo is not found
+npm i -g expo
+#run these commands to install navigation related packages
+npm i @react-navigation/native
+expo install react-native-gesture-handler  react-native-reanimated  react-native-screens  react-native-safe-area-context
+expo install @react-native-community/masked-view
+npm i @react-navigation/native-stack
