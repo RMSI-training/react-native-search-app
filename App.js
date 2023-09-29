@@ -41,12 +41,14 @@ export default function App() {
     // </View>
   );
 }
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   return (<Button title='go back' onPress={() => navigation.navigate('profile')}></Button>)
 
 }
 const profileScreen = ({ navigation, route }) => {
-  return <Text>This is home screen</Text>
+  return (
+    <View><Button title='go home' onPress={() => navigation.navigate('home')}></Button>
+      <Text>This is profile screen</Text></View>)
 }
 const styles = StyleSheet.create({
   input1: {
