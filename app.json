@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
     "name": "search-app",
     "slug": "search-app",
     "version": "1.0.0",
@@ -9,3 +17,4 @@
   },
   "name": "search-app"
 }
+
