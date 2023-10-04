@@ -15,3 +15,6 @@ npm i @react-navigation/native
 expo install react-native-gesture-handler  react-native-reanimated  react-native-screens  react-native-safe-area-context
 expo install @react-native-community/masked-view
 npm i @react-navigation/native-stack
+
+==============  Drawer navigation ============
+npm i @react-navigation/drawer

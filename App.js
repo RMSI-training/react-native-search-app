@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, TextInput, Button, ScrollView } from 'react-nat
 import Modal from 'react-native-modal';
 import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-const Stack = createNativeStackNavigator();
+import { createDrawerNavigator } from '@react-navigation/drawer';
+const Drawer = createDrawerNavigator();
 export default function App() {
   const [visible, setVisible] = useState(false);
   function handlePress() {
@@ -13,12 +13,12 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='home' component={HomeScreen} options={{ title: 'Home' }}>
-        </Stack.Screen>
-        <Stack.Screen name='profile' component={profileScreen}>
-        </Stack.Screen>
-      </Stack.Navigator>
+      <Drawer.Navigator>
+        <Drawer.Screen name='home' component={HomeScreen} options={{ title: 'Home' }}>
+        </Drawer.Screen>
+        <Drawer.Screen name='profile' component={ProfileScreen}>
+        </Drawer.Screen>
+      </Drawer.Navigator>
     </NavigationContainer>
     // <View style={styles.container}>
     //   <Text>Open up App.js to start working on your app!</Text>
@@ -45,7 +45,7 @@ const HomeScreen = ({navigation}) => {
   return (<Button title='go back' onPress={() => navigation.navigate('profile')}></Button>)
 
 }
-const profileScreen = ({ navigation, route }) => {
+const ProfileScreen = ({ navigation, route }) => {
   return <Text>This is home screen</Text>
 }
 const styles = StyleSheet.create({
